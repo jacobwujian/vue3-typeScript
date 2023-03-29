@@ -1,0 +1,29 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json", //  继承的配置文件，表示当前文件的配置选项是基于 @vue/tsconfig/tsconfig.web.json 文件的配置选项进行的扩展。@vue/tsconfig/tsconfig.web.json 是 Vue.js 官方提供的 TypeScript 配置文件，包含了一些常用的配置选项。
+  "include": ["env.d.ts", "src/**/*", "*.vue"], // 指定要包含在编译中的文件列表，这里包含了 env.d.ts、src/**/* 和 *.vue。env.d.ts 是用于定义全局变量的类型声明文件，src/**/* 表示编译 src 目录及其所有子目录中的 TypeScript 文件，*.vue 表示编译所有的 Vue 单文件组件中的 TypeScript 代码。
+  "exclude": ["node_modules", "dist"], // 表示要排除的文件或目录，这里排除了 node_modules 和 dist 目录，不会对其进行编译。
+  "compilerOptions": {
+    "isolatedModules": true,
+    "baseUrl": ".", // 模块解析的根路径，默认为当前目录，该选项指定了所有非相对导入的模块的根路径。
+    "module": "ESNext", // 指定要使用的模块规范，例如 CommonJS、AMD、ES6 等。在这里，设置为 ESNext 表示使用最新的 ECMAScript 模块规范。
+    "target": "ESNext", //编译后的 JavaScript 代码的目标版本，例如 ES5、ES6、ES2018 等。在这里，设置为 ESNext 表示编译后的代码支持最新的 ECMAScript 语法特性。
+    "lib": ["DOM", "ESNext"], //指定编译时需要引入哪些内置的类型定义文件，例如 DOM 表示引入浏览器的 DOM 类型定义文件，ESNext 表示引入最新的 ECMAScript 类型定义文件。
+    "strict": true, // 启用所有严格类型检查选项，包括 noImplicitAny、
+    "esModuleInterop": true, // 允许在导入 CommonJS 模块时使用 ES 模块的语法，例如 import foo from 'bar'，而不是 const foo = require('bar')。
+    "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中默认导入内容。
+    "jsx": "preserve", //  指定 JSX 的编译方式，通常为 preserve，表示不进行编译。
+    "moduleResolution": "node", //  指定模块解析的方式，例如 node 表示使用 Node.js 的模块解析方式。
+    "resolveJsonModule": true, // 允许导入 JSON 文件，并且自动为其生成类型声明文件。
+    "noUnusedLocals": false, // 检查未使用的局部变量。
+    "strictNullChecks": false, //  启用严格的 null 检查。
+    "forceConsistentCasingInFileNames": false, // 强制所有文件名必须使用相同的大小写形式。
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

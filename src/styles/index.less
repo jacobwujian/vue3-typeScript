@@ -1,0 +1,183 @@
+@import './common.less';
+@import './fonts/iconfont.css';
+@import './fonts/screenfont.css';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+  font-size: 14px;
+  color: @text-color;
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul, dl {
+  margin-bottom: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.pull-left {
+  float: right;
+}
+
+.pull-right {
+  float: left;
+}
+
+.clearfix:after,
+.container:after {
+  clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: ' ';
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-26 {
+  font-size: 26px;
+}
+
+.text-gray {
+  color: @text-gray;
+}
+
+.textover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pb-20 { padding-bottom: 20px; }
+
+.pb-50 { padding-bottom: 50px; }
+
+.pt-50 { padding-top: 50px; }
+
+.home-container {
+  width: 100%;
+  padding: 0 120px;
+}
+
+@media (max-width: 1366px) {
+  .home-container {
+    min-width: 1200px;
+    padding: 0 60px;
+    margin: 0 auto;
+  }
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #d3dce6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 20px;
+}
+.cur-pointer{
+  color:#1890ff;
+  cursor:pointer;
+  margin: 0 8px;
+}
+.model-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
